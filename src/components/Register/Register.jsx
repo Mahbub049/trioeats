@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import { FaImage, FaRegEye, FaRegEyeSlash, FaUser } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
     const [passwordState, setPasswordState] = useState(false);
@@ -50,6 +52,7 @@ const Register = () => {
                 <div className="container mx-auto">
                     <Navbar></Navbar>
                     <div>
+                        <ToastContainer></ToastContainer>
                     <div className="hero min-h-screen poppins">
                         <div className="hero-content flex-col lg:flex-row-reverse gap-6">
                             <div className="text-center lg:text-left flex-1">
