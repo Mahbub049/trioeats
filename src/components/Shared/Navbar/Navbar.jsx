@@ -2,22 +2,26 @@ import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
 import { Tooltip } from "react-tooltip";
 import { FaRegUserCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+
 
 const Navbar = () => {
-    // const user = {
-    //     displayName: "Mahbub Sarwar",
-    //     email: "mahbubsarwar5@gmail.com"
-    // }
-    const user = null;
+    const {user, logOut} = useContext(AuthContext);
     const links = 
     <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/allfoods'}>All Foods</NavLink></li>
         <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
     </>
+    const signOutUser = () => {
+        logOut()
+        .then(()=>{})
+        .catch(()=>{})
+    }
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 mt-3">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,7 +62,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <button  className="btn text-white lg:ml-4 bg-[#F0997D]">Log Out</button>
+                    <button onClick={signOutUser} className="btn text-white lg:ml-4 bg-[#F0997D]">Log Out</button>
                 </> :
                 <div className="flex">
                     <Link to={'/login'} className="btn btn-outline text-[#F0997D] ml-4 border-[#F0997D] hover:bg-[#A75D5D] hover:border-white">Log In</Link>

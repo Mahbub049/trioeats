@@ -1,12 +1,18 @@
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
 
 const Home = () => {
     return (
-        <div>
-            <div className="container mx-auto mt-3">
-                <Navbar></Navbar>
+        <HelmetProvider>
+            <Helmet>
+                <title>TrioEats</title>
+            </Helmet>
+            <div>
+                <div className="container mx-auto">
+                    <Navbar></Navbar>
+                </div>
             </div>
-        </div>
+        </HelmetProvider>
     );
 };
 
