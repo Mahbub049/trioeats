@@ -3,3 +3,13 @@
     color: #D3756B !important;
     font-weight: 600;
 }
+
+.active:hover{
+    background-color: #D3756B !important;
+    color: white !important;
+}
+
+li:hover{
+    background-color: #FFC3A1;
+    border-radius: 0.5rem;
+}

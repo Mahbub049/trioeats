@@ -14,6 +14,13 @@ const Navbar = () => {
         <li><NavLink to={'/allfoods'}>All Foods</NavLink></li>
         <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
     </>
+
+    const userLists = 
+    <>
+        <li><NavLink to={'/itemsadded'}>My Added Items</NavLink></li>
+        <li><NavLink to={'/additems'}>Add Items</NavLink></li>
+        <li><NavLink to={'/ordered'}>Ordered Items</NavLink></li>
+    </>
     const signOutUser = () => {
         logOut()
         .then(()=>{})
@@ -31,7 +38,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl h-20"><img src="/src/assets/trioeats-logo.png" alt="" className="w-56" /></a>
+                    <Link to={'/'} className="btn btn-ghost text-xl h-20"><img src="/src/assets/trioeats-logo.png" alt="" className="w-56" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -48,14 +55,7 @@ const Navbar = () => {
                                 <div>
                                     <img referrerpolicy="no-referrer" alt="User" src={user.photoURL? user.photoURL : <FaRegUserCircle />} />
                                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                        <li>
-                                        <a className="justify-between">
-                                            Profile
-                                            <span className="badge">New</span>
-                                        </a>
-                                        </li>
-                                        <li><a>Settings</a></li>
-                                        <li><a>Logout</a></li>
+                                        {userLists}
                                     </ul>
                                 </div>
                                 </div>
