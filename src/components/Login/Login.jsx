@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const {login,googleLogin} = useContext(AuthContext);
@@ -20,7 +21,11 @@ const Login = () => {
         console.log(email, password)
         login(email, password)
         .then(()=>{
-            toast.success("Successful");
+            Swal.fire({
+                title: "Logged In!",
+                text: "You have successfully Logged In",
+                icon: "success"
+              });
             navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
@@ -30,8 +35,17 @@ const Login = () => {
 
     const googleUserLogin = () =>{
         googleLogin()
-        .then(()=>{navigate(location?.state ? location.state : '/')})
-        .catch((error)=>{toast.error("Please Try Again!");})
+        .then(()=>{
+            Swal.fire({
+                title: "Logged In!",
+                text: "You have successfully Logged In",
+                icon: "success"
+              });
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(()=>{
+            toast.error("Please Try Again!");
+        })
     }
     return (
         <HelmetProvider>
