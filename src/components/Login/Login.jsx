@@ -6,7 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const {login,googleLogin} = useContext(AuthContext);
@@ -42,6 +43,7 @@ const Login = () => {
                     <Navbar></Navbar>
                     <div>
                     <div className="hero poppins">
+                        <ToastContainer></ToastContainer>
                         <div className="hero-content flex-col lg:flex-row gap-6">
                             <div className="text-center lg:text-left flex-1">
                                 <img src="/src/assets/foodlogin.jpg" alt="" />
@@ -66,6 +68,7 @@ const Login = () => {
                                 <div className="form-control mt-6">
                                         <button className="btn text-white bg-[#F0997D]">Login</button>
                                 </div>
+                            </form>
                                 <div className="my-6">
                                     <h2 className="text-center text-sm poppins">Login With</h2>
                                     <div className="flex justify-center">
@@ -77,7 +80,6 @@ const Login = () => {
                                         <p className="text-[14px]">Don&apos;t have an account? <Link className='text-[#F0997D]' to={'/register'}>Register Now</Link></p>
                                     </div>
                                 </div>
-                            </form>
                             </div>
                         </div>
                         </div>
