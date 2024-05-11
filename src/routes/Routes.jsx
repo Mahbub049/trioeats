@@ -8,6 +8,7 @@ import AddFoodItem from "../components/AddFoodItem/AddFoodItem";
 import PrivateRoute from "./PrivateRoute";
 import AddedItems from "../components/AddedItems/AddedItems";
 import Update from "../components/AddedItems/Update/Update";
+import AllFoods from "../components/AllFoods/AllFoods";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
           path: '/update/:id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
           loader: ({params})=>fetch(`http://localhost:5000/items/${params.id}`)
+        },
+        {
+          path: '/allfoods',
+          element: <AllFoods></AllFoods>,
+          loader: ()=>fetch(`http://localhost:5000/items`)
         }
       ]
     },
