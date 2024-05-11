@@ -10,6 +10,7 @@ import { BiCategoryAlt } from "react-icons/bi";
 import { SiCashapp } from 'react-icons/si';
 import { FaSortAmountDown } from "react-icons/fa";
 import Footer from '../Shared/Footer/Footer';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const AddFoodItem = () => {
     const {user} = useContext(AuthContext);
@@ -41,6 +42,10 @@ const AddFoodItem = () => {
         })
       }
     return (
+        <HelmetProvider>
+            <Helmet>
+                <title>TrioEats | Add Food Item</title>
+            </Helmet>
         <div>
             <div className='container mx-auto'>
                 <Navbar></Navbar>
@@ -155,6 +160,7 @@ const AddFoodItem = () => {
             </div>
             <Footer></Footer>
         </div>
+        </HelmetProvider>
     );
 };
 
