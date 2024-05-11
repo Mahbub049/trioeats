@@ -9,6 +9,7 @@ import { FaImage, FaMapMarkerAlt } from 'react-icons/fa';
 import { BiCategoryAlt } from "react-icons/bi";
 import { SiCashapp } from 'react-icons/si';
 import { FaSortAmountDown } from "react-icons/fa";
+import Footer from '../Shared/Footer/Footer';
 
 const AddFoodItem = () => {
     const {user} = useContext(AuthContext);
@@ -152,6 +153,7 @@ const AddFoodItem = () => {
                     </form>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

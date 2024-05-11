@@ -1,6 +1,7 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
 import Banner from "./Banner/Banner";
+import Footer from "../Shared/Footer/Footer";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                     <Navbar></Navbar>
                     <Banner></Banner>
                 </div>
+                    <Footer></Footer>
             </div>
         </HelmetProvider>
     );
