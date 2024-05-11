@@ -22,7 +22,7 @@ const AddFoodItem = () => {
 
       const onSubmit = (data, e) => {
         data.quantity = parseInt(data.quantity);
-        data.price = parseInt(data.price);
+        data.price = parseFloat(data.price);
         fetch('http://localhost:5000/items', {
             method: 'POST',
             headers: {
@@ -129,7 +129,7 @@ const AddFoodItem = () => {
                             </div>
                             <label className="input input-bordered border-[#A75D5D] flex items-center gap-2">
                                 <SiCashapp className="text-[#A75D5D]" />
-                                <input {...register("price", { required: true })} type="number" className="grow" placeholder="Price" />
+                                <input {...register("price", { required: true })} type="text" className="grow" placeholder="Price" />
                                 {errors.price && <span className="text-red-500">This field is required</span>}
                             </label>
                         </div>

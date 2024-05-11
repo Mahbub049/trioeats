@@ -7,7 +7,7 @@ const FoodCard = ({food}) => {
     const {_id, foodname, category, image, price, quantity} = food;
     return (
         <div>
-            <div className="card lg:card-side bg-base-100 shadow-xl px-4 py-0 border-2 border-[#a75d5d29] poppins">
+            <div className="card lg:card-side bg-base-100 h-[312px] shadow-xl px-4 py-0 border-2 border-[#a75d5d29] poppins">
                 <figure className="flex-1"><img src={image} className="rounded-xl w-full" alt="Album"/></figure>
                 <div className="card-body flex-1">
                     <h2 className="card-title font-bold text-2xl text-[#D3756B]">{foodname}</h2>
