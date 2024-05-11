@@ -5,6 +5,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import AddFoodItem from "../components/AddFoodItem/AddFoodItem";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/additems',
-          element: <AddFoodItem></AddFoodItem>
+          element: <PrivateRoute><AddFoodItem></AddFoodItem></PrivateRoute>
         }
       ]
     },
