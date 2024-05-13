@@ -1,15 +1,20 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from './../Shared/Navbar/Navbar';
 import Footer from "../Shared/Footer/Footer";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useLoaderData, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { FaImage } from "react-icons/fa";
+import Swal from "sweetalert2";
+import GalleryCard from "./GalleryCard/GalleryCard";
 
 const Gallery = () => {
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
+    const loadedGallery = useLoaderData();
+    const [gallery, setGallery] = useState(loadedGallery);
+    console.log(gallery)
     const {
         register,
         handleSubmit,
@@ -18,23 +23,23 @@ const Gallery = () => {
     
     const onSubmit = (data, e) => {
         console.log(data);
-    //   fetch('http://localhost:5000/items', {
-    //       method: 'POST',
-    //       headers: {
-    //           'content-type': 'application/json'
-    //       },
-    //       body: JSON.stringify(data)
-    //   })
-    //   .then(res=>res.json())
-    //   .then(data=>{
-    //       Swal.fire({
-    //           title: 'Success!',
-    //           text: 'Successfully Added',
-    //           icon: 'success',
-    //           confirmButtonText: 'Okay'
-    //         })
-    //         e.target.reset();
-    //   })
+      fetch('http://localhost:5000/gallery', {
+          method: 'POST',
+          headers: {
+              'content-type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+          Swal.fire({
+              title: 'Success!',
+              text: 'Successfully Added',
+              icon: 'success',
+              confirmButtonText: 'Okay'
+            })
+            e.target.reset();
+      })
     }
     return (
         <HelmetProvider>
@@ -113,7 +118,12 @@ const Gallery = () => {
                         </>
                         }
                         </div>
-                    </div>
+                        </div>
+                        <div className="mx-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                        {
+                            gallery.map(gallery=><GalleryCard key={gallery._id} gallery={gallery}></GalleryCard>)
+                        }
+                        </div>
                     </div>
                 </div>
                 <Footer></Footer>
