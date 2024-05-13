@@ -14,7 +14,7 @@ import { BsCalendarDateFill } from "react-icons/bs";
 const Purchase = () => {
     const {user} = useContext(AuthContext);
      const loadedFood = useLoaderData();
-     const {foodname, price, quantity} = loadedFood;
+     const {email, foodname, price, quantity} = loadedFood;
      
      let d = new Date(Date.now());
      let month = d.toLocaleString('en-US', { month: 'short' });
@@ -33,10 +33,18 @@ const Purchase = () => {
         data.price = parseFloat(data.price)*(data.quantity);
         console.log(data);
         
-        if(data.quantity > quantity){
+        if(data.quantity>quantity){
             Swal.fire({
                 title: 'Error!',
                 text: "You can't order more than quantity!",
+                icon: 'error',
+                confirmButtonText: 'Okay'
+              })
+        }
+        else if(data.email === email){
+            Swal.fire({
+                title: 'Error!',
+                text: "You can't order your own product!",
                 icon: 'error',
                 confirmButtonText: 'Okay'
               })
