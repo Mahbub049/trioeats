@@ -31,11 +31,11 @@ const AddedItems = () => {
                             <table className="table poppins">
                                 {/* head */}
                                 <thead>
-                                <tr className="text-lg text-[#D3756B] text-center">
+                                <tr className="text-lg text-[#D3756B">
                                     <th>Food Name, Image</th>
-                                    <th>Category</th>
-                                    <th>Price</th>
-                                    <th>Update</th>
+                                    <th className="text-center">Category</th>
+                                    <th className="text-center">Price</th>
+                                    <th className="text-center">Update</th>
                                 </tr>
                                 </thead>
                                 <tbody>

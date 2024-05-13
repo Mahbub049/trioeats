@@ -23,6 +23,7 @@ const AddFoodItem = () => {
       const onSubmit = (data, e) => {
         data.quantity = parseInt(data.quantity);
         data.price = parseFloat(data.price);
+        data.purchaseCount = 0;
         fetch('http://localhost:5000/items', {
             method: 'POST',
             headers: {

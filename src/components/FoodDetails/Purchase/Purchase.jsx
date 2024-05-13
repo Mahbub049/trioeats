@@ -14,7 +14,7 @@ import { BsCalendarDateFill } from "react-icons/bs";
 const Purchase = () => {
     const {user} = useContext(AuthContext);
      const loadedFood = useLoaderData();
-     const {email, foodname, price, quantity} = loadedFood;
+     const {name, email, foodname, price, quantity, image} = loadedFood;
      
      let d = new Date(Date.now());
      let month = d.toLocaleString('en-US', { month: 'short' });
@@ -31,6 +31,11 @@ const Purchase = () => {
         data.email = user.email;
         data.quantity = parseInt(data.quantity);
         data.price = parseFloat(data.price)*(data.quantity);
+        data.image = image,
+        data.owner = {
+            name: name,
+            email: email
+        }
         console.log(data);
         
         if(data.quantity>quantity){
@@ -51,23 +56,23 @@ const Purchase = () => {
         }
         else{
             console.log("okay")
-            // fetch('http://localhost:5000/purchase', {
-            //     method: 'POST',
-            //     headers: {
-            //         'content-type': 'application/json'
-            //     },
-            //     body: JSON.stringify(data)
-            // })
-            // .then(res=>res.json())
-            // .then(data=>{
-            //     Swal.fire({
-            //         title: 'Success!',
-            //         text: 'Successfully Added',
-            //         icon: 'success',
-            //         confirmButtonText: 'Okay'
-            //       })
-            //       e.target.reset();
-            // })
+            fetch('http://localhost:5000/purchase', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Successfully Puchased!',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
+                  e.target.reset();
+            })
         }
       }
     return (

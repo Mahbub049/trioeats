@@ -19,7 +19,7 @@ const Navbar = () => {
     <>
         <li><NavLink to={'/itemsadded'}>My Added Items</NavLink></li>
         <li><NavLink to={'/additems'}>Add Items</NavLink></li>
-        <li><NavLink to={'/ordered'}>Ordered Items</NavLink></li>
+        <li><NavLink to={'/orders'}>Ordered Items</NavLink></li>
     </>
     const signOutUser = () => {
         logOut()

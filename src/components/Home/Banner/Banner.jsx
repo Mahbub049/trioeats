@@ -26,7 +26,7 @@ const Banner = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
+            className="mySwiper -z-10"
         >
             <img src="" alt="" />
         <SwiperSlide>
@@ -34,7 +34,7 @@ const Banner = () => {
                 <div className='flex flex-col justify-center items-center h-[650px] text-center'>
                     <h1 className='text-white font-bold text-2xl md:text-4xl lg:text-6xl lg:leading-[70px]'>Explore Global Flavors Today!</h1>
                     <p className='text-white lg:text-lg lg:leading-8 mt-6 px-8 md:px-16 lg:px-96 mb-6'>Embark on a culinary journey with our diverse range of international dishes, curated to tantalize your taste buds and ignite your senses.</p>
-                    <Link to={'/allitems'}>
+                    <Link to={'/allfoods'}>
                         <button className='btn lg:text-md bg-[#A75D5D] border-0 text-white'>Explore All Foods</button>
                     </Link>
                 </div>
@@ -45,7 +45,7 @@ const Banner = () => {
                 <div className='flex flex-col justify-center items-center h-[650px] text-center'>
                         <h1 className='text-white font-bold text-2xl lg:text-6xl md:text-4xl lg:leading-[70px]'>Indulge in Local <br /> Delicacies Here! </h1>
                         <p className='text-white lg:text-lg lg:leading-8 mt-6 px-8 md:px-16 lg:px-96 mb-6'>Savor the essence of our region with locally sourced ingredients and traditional recipes, crafted with passion and authenticity for a memorable dining experience.</p>
-                        <Link to={'/allitems'}>
+                        <Link to={'/allfoods'}>
                             <button className='btn lg:text-md bg-[#A75D5D] border-0 text-white'>Explore All Foods</button>
                         </Link>
                     </div>
@@ -56,7 +56,7 @@ const Banner = () => {
                 <div className='flex flex-col justify-center items-center h-[650px] text-center'>
                         <h1 className='text-white font-bold text-2xl lg:text-6xl md:text-4xl lg:leading-[70px]'>Discover Chef&apos;s Special Creations!</h1>
                         <p className='text-white lg:text-lg lg:leading-8 mt-6 px-8 md:px-16 lg:px-96 mb-6'>Delight in our chef&apos;s innovative masterpieces, expertly crafted with premium ingredients and artistic flair, to elevate your dining adventure to new heights of gastronomic bliss.</p>
-                        <Link to={'/allitems'}>
+                        <Link to={'/allfoods'}>
                             <button className='btn lg:text-md bg-[#A75D5D] border-0 text-white'>Explore All Foods</button>
                         </Link>
                     </div>
