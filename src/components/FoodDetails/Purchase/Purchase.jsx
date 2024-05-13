@@ -33,23 +33,34 @@ const Purchase = () => {
         data.price = parseFloat(data.price)*(data.quantity);
         console.log(data);
         
-        // fetch('http://localhost:5000/purchase', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        // .then(res=>res.json())
-        // .then(data=>{
-        //     Swal.fire({
-        //         title: 'Success!',
-        //         text: 'Successfully Added',
-        //         icon: 'success',
-        //         confirmButtonText: 'Okay'
-        //       })
-        //       e.target.reset();
-        // })
+        if(data.quantity > quantity){
+            Swal.fire({
+                title: 'Error!',
+                text: "You can't order more than quantity!",
+                icon: 'error',
+                confirmButtonText: 'Okay'
+              })
+        }
+        else{
+            console.log("okay")
+            // fetch('http://localhost:5000/purchase', {
+            //     method: 'POST',
+            //     headers: {
+            //         'content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(data)
+            // })
+            // .then(res=>res.json())
+            // .then(data=>{
+            //     Swal.fire({
+            //         title: 'Success!',
+            //         text: 'Successfully Added',
+            //         icon: 'success',
+            //         confirmButtonText: 'Okay'
+            //       })
+            //       e.target.reset();
+            // })
+        }
       }
     return (
         <HelmetProvider>
