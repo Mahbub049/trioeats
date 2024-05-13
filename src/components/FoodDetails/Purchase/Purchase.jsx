@@ -139,7 +139,9 @@ const Purchase = () => {
                             </div>
                             </div>
                             
-                            <button className="btn btn-wide w-full text-white font-semibold text-xl bg-orange-700 hover:bg-orange-300">Purchase</button>
+                            {
+                                quantity === 0 ? <button disabled className="btn btn-wide w-full text-white font-semibold text-xl bg-orange-700 hover:bg-orange-300">Purchase</button> : <button className="btn btn-wide w-full text-white font-semibold text-xl bg-orange-700 hover:bg-orange-300">Purchase</button>
+                            }
                         </form>
                     </div>
                 </div>
