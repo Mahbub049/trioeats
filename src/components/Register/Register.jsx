@@ -2,17 +2,24 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaImage, FaRegEye, FaRegEyeSlash, FaUser } from "react-icons/fa";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
 
 
 const Register = () => {
     const [passwordState, setPasswordState] = useState(false);
-    const {createUser, updateUserInfo, setUser} = useContext(AuthContext);
+    const {createUser, updateUserInfo, setUser, user, loading} = useContext(AuthContext);
+    const navigate = useNavigate();
+    useEffect(() => {
+        if(user) {
+          navigate('/')
+        }
+      }, [navigate, user])
     const {
         register,
         handleSubmit,
@@ -32,8 +39,13 @@ const Register = () => {
                     photoURL: photoURL,
                     email: email
                 })
-                // navigate(location?.state ? location.state : '/')
-                toast.success("Successfully Registered!");
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Successfully Added',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                  })
+                navigate(location?.state ? location.state : '/')
             })
             .catch(()=>{   
                 toast.error("Something went wrong!");
@@ -43,6 +55,7 @@ const Register = () => {
             toast.error("This email already exists!");
         })
     };
+    if (user || loading) return
     return (
         <HelmetProvider>
             <Helmet>

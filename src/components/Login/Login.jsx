@@ -4,17 +4,22 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { useForm } from "react-hook-form"
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2'
 
 const Login = () => {
-    const {login,googleLogin} = useContext(AuthContext);
+    const {login,googleLogin, user, loading} = useContext(AuthContext);
     const {register, handleSubmit, formState: { errors }} = useForm();
     const navigate = useNavigate();
     const location = useLocation();
+    useEffect(() => {
+        if(user) {
+          navigate('/')
+        }
+      }, [navigate, user])
     const onSubmit = (data) => {
         const email = data.email;
         const password = data.password;
@@ -47,6 +52,7 @@ const Login = () => {
             toast.error("Please Try Again!");
         })
     }
+    if (user || loading) return
     return (
         <HelmetProvider>
             <Helmet>
