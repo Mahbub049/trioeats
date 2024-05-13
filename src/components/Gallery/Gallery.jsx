@@ -22,7 +22,6 @@ const Gallery = () => {
       } = useForm();
     
     const onSubmit = (data, e) => {
-        console.log(data);
       fetch('http://localhost:5000/gallery', {
           method: 'POST',
           headers: {
@@ -32,13 +31,15 @@ const Gallery = () => {
       })
       .then(res=>res.json())
       .then(data=>{
-          Swal.fire({
-              title: 'Success!',
-              text: 'Successfully Added',
-              icon: 'success',
-              confirmButtonText: 'Okay'
-            })
-            e.target.reset();
+          //   Swal.fire({
+              //       title: 'Success!',
+              //       text: 'Successfully Added',
+              //       icon: 'success',
+              //       confirmButtonText: 'Okay'
+              //     })
+              setGallery([...gallery, data])
+              e.target.reset();
+              location.reload()
       })
     }
     return (

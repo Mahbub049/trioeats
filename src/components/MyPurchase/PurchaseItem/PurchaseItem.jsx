@@ -22,7 +22,7 @@ const PurchaseItem = ({item, items, setItem}) => {
                     if(data.deletedCount > 0){
                         Swal.fire({
                             title: "Deleted!",
-                            text: "Your file has been deleted.",
+                            text: "Your food has been deleted.",
                             icon: "success"
                           });
                           setItem(items.filter(i=>i._id !==id))
