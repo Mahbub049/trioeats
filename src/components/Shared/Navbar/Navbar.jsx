@@ -47,14 +47,14 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                 {user ? <>
-                    <div className="dropdown dropdown-end">
+                    <div className="dropdown dropdown-end z-10">
                         <Tooltip className="z-10" id="my-tooltip" />
                         <div className="tooltip" data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} data-tooltip-place="left">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                <div>
+                                <div className="z-10">
                                     <img referrerpolicy="no-referrer" alt="User" src={user.photoURL? user.photoURL : <FaRegUserCircle />} />
-                                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
+                                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow active:z-10 bg-base-100 rounded-box w-52">
                                         {userLists}
                                     </ul>
                                 </div>

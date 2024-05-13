@@ -14,7 +14,7 @@ import { BsCalendarDateFill } from "react-icons/bs";
 const Purchase = () => {
     const {user} = useContext(AuthContext);
      const loadedFood = useLoaderData();
-     const {name, email, foodname, price, quantity, image} = loadedFood;
+     const {_id, name, email, foodname, price, quantity, image} = loadedFood;
      
      let d = new Date(Date.now());
      let month = d.toLocaleString('en-US', { month: 'short' });
@@ -32,6 +32,7 @@ const Purchase = () => {
         data.quantity = parseInt(data.quantity);
         data.price = parseFloat(data.price)*(data.quantity);
         data.image = image,
+        data.foodId = _id,
         data.owner = {
             name: name,
             email: email

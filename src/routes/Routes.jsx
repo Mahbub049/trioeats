@@ -12,6 +12,7 @@ import AllFoods from "../components/AllFoods/AllFoods";
 import FoodDetails from "../components/FoodDetails/FoodDetails";
 import Purchase from "../components/FoodDetails/Purchase/Purchase";
 import MyPurchase from "../components/MyPurchase/MyPurchase";
+import Gallery from "../components/Gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
         {
           path: '/orders',
           element: <PrivateRoute><MyPurchase></MyPurchase></PrivateRoute>
+        },
+        {
+          path: '/gallery',
+          element: <Gallery></Gallery>
         }
       ]
     },

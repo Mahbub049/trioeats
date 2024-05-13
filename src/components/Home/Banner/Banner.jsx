@@ -26,9 +26,8 @@ const Banner = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper -z-10"
+            className="mySwiper z-0 "
         >
-            <img src="" alt="" />
         <SwiperSlide>
             <div className='bg-[linear-gradient(45deg,rgba(19,19,24,0.50),rgba(19,19,24,0.50)),url("/src/assets/Banner/banner1.jpg")] bg-center bg-cover min-h-[650px] rounded-xl'>
                 <div className='flex flex-col justify-center items-center h-[650px] text-center'>

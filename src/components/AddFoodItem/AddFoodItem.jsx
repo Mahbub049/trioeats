@@ -65,7 +65,7 @@ const AddFoodItem = () => {
                                     <input {...register("name", { required: true })} type="text" defaultValue={user.displayName} className="grow" placeholder="Username"/>
                                     {errors.name && <span className="text-red-500">This field is required</span>}
                                 </label>
-                            </div>
+                                </div>
                             <div className="flex-1">
                                 <div className="label">
                                     <span className="label-text font-semibold text-[#D3756B]">User Email</span>
