@@ -35,9 +35,9 @@ const Reservations = () => {
         <div className="my-16">
             <div className="py-6 mons text-center my-6 rounded-xl mx-3 lg:mx-0">
                     <h3 className="text-4xl mb-4 font-bold text-[#a14c43] mons">Reservations</h3>
-                    <p className="w-1/2 mx-auto">Secure your table effortlessly with our reservation system. Enjoy hassle-free bookings, flexible scheduling, and personalized service. Reserve your spot for a memorable dining experience today!</p>
+                    <p className="lg:w-1/2 mx-auto">Secure your table effortlessly with our reservation system. Enjoy hassle-free bookings, flexible scheduling, and personalized service. Reserve your spot for a memorable dining experience today!</p>
             </div>
-            <div className="flex items-center">
+            <div className="flex flex-col-reverse lg:flex-row items-center">
                 <div className="flex-1">
                     <img src="https://i.ibb.co/Y8V1hZw/4034081.jpg" alt="" />
                 </div>

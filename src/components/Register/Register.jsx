@@ -38,14 +38,30 @@ const Register = () => {
                     displayName: name,
                     photoURL: photoURL,
                     email: email
-                })
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Successfully Registered!',
-                    icon: 'success',
-                    confirmButtonText: 'Okay'
-                  })
-                navigate(location?.state ? location.state : '/')
+                });
+                fetch('http://localhost:5000/register', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+                    })
+                    .then(res=>res.json())
+                    .then(data=>{
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Successfully Registered!',
+                            icon: 'success',
+                            confirmButtonText: 'Okay'
+                        })
+                        navigate(location?.state ? location.state : '/')
+                    })
+                // Swal.fire({
+                //     title: 'Success!',
+                //     text: 'Successfully Registered!',
+                //     icon: 'success',
+                //     confirmButtonText: 'Okay'
+                //   })
             })
             .catch(()=>{   
                 toast.error("Something went wrong!");
