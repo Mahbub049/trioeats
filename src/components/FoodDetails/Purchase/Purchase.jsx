@@ -158,7 +158,7 @@ const Purchase = () => {
                                 </div>
                                 <label className="input input-bordered border-[#A75D5D] flex items-center gap-2">
                                     <BsCalendarDateFill className="text-[#A75D5D]" />
-                                    <input {...register("date", { required: true })} type="text" className="grow" defaultValue={formattedDate} placeholder="Buying Date" />
+                                    <input {...register("date", { required: true })} type="text" className="grow" value={formattedDate} placeholder="Buying Date" />
                                     {errors.date && <span className="text-red-500">This field is required</span>}
                                 </label>
                             </div>

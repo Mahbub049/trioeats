@@ -8,7 +8,7 @@ const Contact = () => {
     const position = [23.821060, 90.394636];
     return (
         <div>
-            <div className="mt-24">
+            <div className="my-16">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl lg:text-4xl font-bold text-[#a14c43] mons">Contact Us</h2>
                     <p className="px-4 lg:px-96 leading-7 mt-4">Connect with us through our Contact Us section. Share your inquiries or feedback via our message form, and explore our location on the map. We look forward to hearing from you!</p>
@@ -37,7 +37,7 @@ const Contact = () => {
                                 <IoMdMail className="text-5xl text-orange-500"></IoMdMail>
                             </div>
                             <div className="space-y-2">
-                                <h3 className="mons font-bold text-2xl">Email Us</h3>
+                                <h3 className="mons font-bold text-2xl text-[#a14c43]">Email Us</h3>
                                 <h5 className="poppins">trioeats@restaurent.bd</h5>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ const Contact = () => {
                                 <FaLocationDot className="text-5xl text-orange-500"></FaLocationDot>
                             </div>
                             <div className="space-y-2">
-                                <h3 className="mons font-bold text-2xl">Location</h3>
+                                <h3 className="mons font-bold text-2xl text-[#a14c43]">Location</h3>
                                 <h5 className="poppins">144/11, Matikata, Dhaka-1206</h5>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const Contact = () => {
                                 <FaPhoneAlt className="text-5xl text-orange-500"></FaPhoneAlt>
                             </div>
                             <div className="space-y-2">
-                                <h3 className="mons font-bold text-2xl">Call Us</h3>
+                                <h3 className="mons font-bold text-2xl text-[#a14c43]">Call Us</h3>
                                 <h5 className="poppins">+88013543543645</h5>
                             </div>
                         </div>
