@@ -25,8 +25,8 @@ const Footer = () => {
             </footer> 
             <footer className="footer container mx-auto px-10 py-4 border-t text-base-content border-base-300 mons">
                 <aside className="items-center grid-flow-col">
-                    <img className="w-48" src="/src/assets/trioeats-logo.png" alt="" />
-                    <p className="text-lg font-semibold">TrioEats Bangladesh Ltd. <br/><span className="text-[16px]">Taste the Trio Delight</span></p>
+                    <img className="w-56" src="/src/assets/trioeats-logo.png" alt="" />
+                    <p className="text-lg text-orange-800 font-bold mons leading-5">TrioEats Bangladesh Ltd. <br/><span className="text-[14px] mons">Taste the Trio Delight</span></p>
                 </aside> 
                 <nav className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
