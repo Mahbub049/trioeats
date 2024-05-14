@@ -1,20 +1,21 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
         <div className="bg-[#FFC3A1] poppins mt-12 pt-12">
             <footer className="footer container mx-auto p-10 text-base-content">
                 <nav>
                     <h6 className="footer-title text-black">Services</h6> 
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <Link to={'/allfoods'} className="link link-hover">All Foods</Link>
+                    <Link to={'/additems'} className="link link-hover">Add Foods</Link>
+                    <Link to={'/orders'} className="link link-hover">Orders</Link>
+                    <Link to={'/itemsadded'} className="link link-hover">Added Items</Link>
                 </nav> 
                 <nav>
                     <h6 className="footer-title text-black">Company</h6> 
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <Link to={"/gallery" }className="link link-hover">Gallery</Link>
+                    <Link to={"/#contact" }className="link link-hover">Contact</Link>
+                    <Link to={'/#reservations'} className="link link-hover">Reservations</Link>
                 </nav> 
                 <nav>
                     <h6 className="footer-title text-black">Legal</h6> 

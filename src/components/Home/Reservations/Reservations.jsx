@@ -32,7 +32,7 @@ const Reservations = () => {
         })
       }
     return (
-        <div className="my-16">
+        <div id="reservations" className="my-16">
             <div className="py-6 mons text-center my-6 rounded-xl mx-3 lg:mx-0">
                     <h3 className="text-4xl mb-4 font-bold text-[#a14c43] mons">Reservations</h3>
                     <p className="lg:w-1/2 mx-auto">Secure your table effortlessly with our reservation system. Enjoy hassle-free bookings, flexible scheduling, and personalized service. Reserve your spot for a memorable dining experience today!</p>

@@ -8,7 +8,7 @@ const Contact = () => {
     const position = [23.821060, 90.394636];
     return (
         <div>
-            <div className="my-16">
+            <div id="contact" className="my-16">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-[#a14c43] mons">Contact Us</h2>
                     <p className="px-4 lg:px-96 leading-7 mt-4">Connect with us through our Contact Us section. Share your inquiries or feedback via our message form, and explore our location on the map. We look forward to hearing from you!</p>
