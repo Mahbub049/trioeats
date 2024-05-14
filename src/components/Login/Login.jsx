@@ -23,7 +23,6 @@ const Login = () => {
     const onSubmit = (data) => {
         const email = data.email;
         const password = data.password;
-        console.log(email, password)
         login(email, password)
         .then(()=>{
             Swal.fire({
@@ -66,7 +65,7 @@ const Login = () => {
                         <ToastContainer></ToastContainer>
                         <div className="hero-content flex-col lg:flex-row gap-6">
                             <div className="text-center lg:text-left flex-1">
-                                <img src="/src/assets/foodlogin.jpg" alt="" />
+                                <img src="https://i.ibb.co/3WKmp2j/foodlogin.jpg" alt="" />
                             </div>
                             <div className="card shrink-0 w-full flex-1 shadow-2xl bg-base-100  p-4">
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body">

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomeCards = () => {
     const [topFoods, setTopFoods] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/topFoods')
+        fetch('https://trioeats-server.vercel.app/topFoods')
         .then(res=>res.json())
         .then(data=>setTopFoods(data))
     },[])

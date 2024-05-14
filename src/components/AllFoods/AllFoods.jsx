@@ -14,7 +14,7 @@ const AllFoods = () => {
     // useEffect(() => {
     //     const getFoods = async () => {
     //       const { data } = await axios(
-    //         `http://localhost:5000/items?search=${search}`
+    //         `https://trioeats-server.vercel.app/items?search=${search}`
     //       )
     //       setFoods(data)
     //     }
@@ -26,7 +26,7 @@ const AllFoods = () => {
         const search = e.target.search.value;
         // setSearchText(search)
         
-        fetch(`http://localhost:5000/search/${search}`)
+        fetch(`https://trioeats-server.vercel.app/search/${search}`)
         .then(res=>res.json())
         .then(data=>setFoods(data))
     }

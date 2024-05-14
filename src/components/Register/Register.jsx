@@ -39,7 +39,7 @@ const Register = () => {
                     photoURL: photoURL,
                     email: email
                 });
-                fetch('http://localhost:5000/register', {
+                fetch('https://trioeats-server.vercel.app/register', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -85,7 +85,7 @@ const Register = () => {
                     <div className="hero min-h-screen poppins">
                         <div className="hero-content flex-col lg:flex-row-reverse gap-6">
                             <div className="text-center lg:text-left flex-1">
-                                <img src="/src/assets/foodregister.jpg" alt="" />
+                                <img src="https://i.ibb.co/4j1ZyhX/foodregister.jpg" alt="" />
                             </div>
                             <div className="card shrink-0 w-full flex-1 shadow-2xl bg-base-100  p-4">
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body">

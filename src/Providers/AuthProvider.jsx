@@ -39,11 +39,11 @@ const AuthProvider = ({children}) => {
             setLoading(false);
 
             if(currentUser){
-                axios.post("http://localhost:5000/jwt",loggedMail, {withCredentials: true})
+                axios.post("https://trioeats-server.vercel.app/jwt",loggedMail, {withCredentials: true})
                 .then(res=>console.log(res.data))
             }
             else{
-                axios.post("http://localhost:5000/logout",loggedMail, {withCredentials: true})
+                axios.post("https://trioeats-server.vercel.app/logout",loggedMail, {withCredentials: true})
                 .then(res=>console.log(res.data))
             }
         })

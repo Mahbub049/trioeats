@@ -13,7 +13,7 @@ const Reservations = () => {
       } = useForm()
 
       const onSubmit = (data, e) => {
-        fetch('http://localhost:5000/reservations', {
+        fetch('https://trioeats-server.vercel.app/reservations', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

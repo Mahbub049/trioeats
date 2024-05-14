@@ -43,22 +43,22 @@ const router = createBrowserRouter([
         {
           path: '/update/:id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/items/${params.id}`)
+          loader: ({params})=>fetch(`https://trioeats-server.vercel.app/items/${params.id}`)
         },
         {
           path: '/allfoods',
           element: <AllFoods></AllFoods>,
-          loader: ()=>fetch(`http://localhost:5000/items`)
+          loader: ()=>fetch(`https://trioeats-server.vercel.app/items`)
         },
         {
           path: '/fooddetails/:id',
           element: <FoodDetails></FoodDetails>,
-          loader: ({params})=>fetch(`http://localhost:5000/items/${params.id}`)
+          loader: ({params})=>fetch(`https://trioeats-server.vercel.app/items/${params.id}`)
         },
         {
           path: '/purchase/:id',
           element: <PrivateRoute><Purchase></Purchase></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:5000/items/${params.id}`, {credentials: 'include'})
+          loader: ({params})=>fetch(`https://trioeats-server.vercel.app/items/${params.id}`, {credentials: 'include'})
         },
         {
           path: '/orders',
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         {
           path: '/gallery',
           element: <Gallery></Gallery>,
-          loader: ()=>fetch('http://localhost:5000/gallery')
+          loader: ()=>fetch('https://trioeats-server.vercel.app/gallery')
         }
       ]
     },

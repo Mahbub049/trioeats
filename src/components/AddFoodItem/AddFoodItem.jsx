@@ -24,7 +24,7 @@ const AddFoodItem = () => {
         data.quantity = parseInt(data.quantity);
         data.price = parseFloat(data.price);
         data.purchaseCount = 0;
-        fetch('http://localhost:5000/items', {
+        fetch('https://trioeats-server.vercel.app/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

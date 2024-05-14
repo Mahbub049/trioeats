@@ -15,7 +15,6 @@ import { BiDollar, BiSolidCategory, BiSolidPurchaseTag } from "react-icons/bi";
 const FoodDetails = () => {
     const food = useLoaderData();
     const {_id, name, email, foodname, origin, category, image, price, description} = food;
-    console.log(food);
     return (
         <HelmetProvider>
             <Helmet>

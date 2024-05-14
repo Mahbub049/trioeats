@@ -14,7 +14,6 @@ const Gallery = () => {
     const navigate = useNavigate();
     const loadedGallery = useLoaderData();
     const [gallery, setGallery] = useState(loadedGallery);
-    console.log(gallery)
     const {
         register,
         handleSubmit,
@@ -22,7 +21,7 @@ const Gallery = () => {
       } = useForm();
     
     const onSubmit = (data, e) => {
-      fetch('http://localhost:5000/gallery', {
+      fetch('https://trioeats-server.vercel.app/gallery', {
           method: 'POST',
           headers: {
               'content-type': 'application/json'

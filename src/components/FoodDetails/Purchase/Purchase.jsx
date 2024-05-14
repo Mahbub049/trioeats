@@ -37,7 +37,6 @@ const Purchase = () => {
             name: name,
             email: email
         }
-        console.log(data);
         
         if(data.quantity>quantity){
             Swal.fire({
@@ -56,8 +55,7 @@ const Purchase = () => {
               })
         }
         else{
-            console.log("okay")
-            fetch('http://localhost:5000/purchase', {
+            fetch('https://trioeats-server.vercel.app/purchase', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -11,7 +11,7 @@ const Contact = () => {
             <div id="contact" className="my-16">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-[#a14c43] mons">Contact Us</h2>
-                    <p className="px-4 lg:px-96 leading-7 mt-4">Connect with us through our Contact Us section. Share your inquiries or feedback via our message form, and explore our location on the map. We look forward to hearing from you!</p>
+                    <p className="px-4 lg:px-96 leading-7 mt-4">Connect with us through our Contact Us section. Share your inquiries or feedback via our mail, and explore our location on the map. We look forward to hearing from you!</p>
                 </div>
                 <div className="flex flex-col-reverse items-center lg:flex-row gap-12 lg:gap-4">
                 <div className="mx-3 lg:flex hidden">
@@ -29,7 +29,7 @@ const Contact = () => {
                     </div>
                 <div className="flex-1">
                     <div className="w-full flex justify-center mb-12">
-                        <img className="w-11/12 lg:w-auto" src="/src/assets/trioeats-logo.png" alt="" />
+                        <img className="w-11/12 lg:w-auto" src="https://i.ibb.co/hBzt89k/trioeats-logo.png" alt="" />
                     </div>
                     <div className="space-y-12 flex mx-6 lg:mx-auto lg:w-1/2 flex-col">
                         <div className="flex gap-4 items-center">

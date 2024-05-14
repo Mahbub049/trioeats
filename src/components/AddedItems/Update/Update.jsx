@@ -26,7 +26,7 @@ const Update = () => {
       const onSubmit = (data, e) => {
         data.quantity = parseInt(data.quantity);
         data.price = parseFloat(data.price);
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://trioeats-server.vercel.app/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
