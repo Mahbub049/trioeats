@@ -2,6 +2,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Navbar from "../Shared/Navbar/Navbar";
 import Banner from "./Banner/Banner";
 import Footer from "../Shared/Footer/Footer";
+import HomeCards from "./HomeCards/HomeCards";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                 <div className="container mx-auto">
                     <Navbar></Navbar>
                     <Banner></Banner>
+                    <HomeCards></HomeCards>
                 </div>
                     <Footer></Footer>
             </div>
