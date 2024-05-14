@@ -13,9 +13,9 @@ const Contact = () => {
                     <h2 className="text-2xl lg:text-4xl font-bold text-[#a14c43] mons">Contact Us</h2>
                     <p className="px-4 lg:px-96 leading-7 mt-4">Connect with us through our Contact Us section. Share your inquiries or feedback via our message form, and explore our location on the map. We look forward to hearing from you!</p>
                 </div>
-                <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-4">
+                <div className="flex flex-col-reverse items-center lg:flex-row gap-12 lg:gap-4">
                 <div className="mx-3">
-                    <MapContainer className="w-full lg:w-[800px] h-[600px]" center={position} zoom={13} scrollWheelZoom={false}>
+                    <MapContainer className="w-full lg:w-[800px] h-[550px]" center={position} zoom={13} scrollWheelZoom={false}>
                         <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

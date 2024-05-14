@@ -9,7 +9,7 @@ const AddedItems = () => {
     const {user} = useContext(AuthContext);
     const [item, setItem] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/foods/${user?.email}`)
+        fetch(`http://localhost:5000/foods/${user?.email}`, {credentials: 'include'})
         .then(res=>res.json())
         .then(data=>{
             setItem(data);

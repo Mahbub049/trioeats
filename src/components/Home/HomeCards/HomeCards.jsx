@@ -9,7 +9,6 @@ const HomeCards = () => {
         .then(res=>res.json())
         .then(data=>setTopFoods(data))
     },[])
-    console.log(topFoods)
     return (
         <div className="my-16">
                 <div className="py-6 mons text-center my-6 rounded-xl mx-3 lg:mx-0">
