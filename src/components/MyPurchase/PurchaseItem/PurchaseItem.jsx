@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const PurchaseItem = ({item, items, setItem}) => {
     const {_id, date, image, foodname, price, owner, quantity} = item;
-    const total_price = price*quantity;
+    const total_price = (price*quantity).toFixed(2);
     const handleDelete = id =>{
         Swal.fire({
             title: "Are you sure?",
