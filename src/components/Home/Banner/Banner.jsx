@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div className='banner'>
-            <div className='mt-8 mx-1'>
+            <div className='lg:mt-8 mt-4 mx-1'>
             <Swiper
             spaceBetween={30}
             centeredSlides={true}

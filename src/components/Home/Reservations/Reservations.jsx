@@ -37,7 +37,7 @@ const Reservations = () => {
                     <h3 className="text-4xl mb-4 font-bold text-[#a14c43] mons">Reservations</h3>
                     <p className="lg:w-1/2 mx-auto">Secure your table effortlessly with our reservation system. Enjoy hassle-free bookings, flexible scheduling, and personalized service. Reserve your spot for a memorable dining experience today!</p>
             </div>
-            <div className="flex flex-col-reverse lg:flex-row items-center">
+            <div className="flex flex-col-reverse lg:flex-row lg:items-center">
                 <div className="flex-1">
                     <img src="https://i.ibb.co/Y8V1hZw/4034081.jpg" alt="" />
                 </div>
@@ -45,7 +45,7 @@ const Reservations = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className="gap-2 mx-6 lg:mx-0 poppins">
                         <div className='flex flex-col gap-3 mb-8 text-lg'>
                             <p className="font-semibold text-[#a14c43]">Your Name</p>
-                            <input {...register("name", { required: true })} className='py-2 px-3 w-full text-[#f58a3d]' type="text" placeholder='Your Name' />
+                            <input {...register("name", { required: true })} className='py-2 px-3 lg:w-full text-[#f58a3d]' type="text" placeholder='Your Name' />
                             {errors.name && <span className="text-red-500">This field is required</span>}
                         </div>
                         <div className='flex flex-col gap-3 mb-8 text-lg'>
@@ -55,19 +55,19 @@ const Reservations = () => {
                         </div>
                         <div className='flex flex-col gap-3 mb-8 text-lg'>
                             <p className="font-semibold text-[#a14c43]">Date</p>
-                            <input {...register("date", { required: true })} className='py-2 px-3 text-[#f58a3d]' type="date" placeholder='Phone Number' />
+                            <input {...register("date", { required: true })} className='py-2 px-3 text-[#f58a3d] w-full' type="date" placeholder='Phone Number' />
                             {errors.date && <span className="text-red-500">This field is required</span>}
                         </div>
                         <div className='flex flex-col gap-3 mb-8 text-lg'>
                             <p className="font-semibold text-[#a14c43]">Time</p>
-                            <input {...register("time", { required: true })} className='py-2 px-3 text-[#f58a3d]' type="time" placeholder='Phone Number' />
+                            <input {...register("time", { required: true })} className='py-2 px-3 text-[#f58a3d] w-full' type="time" placeholder='Phone Number' />
                             {errors.time && <span className="text-red-500">This field is required</span>}
                         </div>
                         <div className='flex flex-col gap-3 mb-8 text-lg'>
                             <p className="font-semibold text-[#a14c43]">Message</p>
-                            <input {...register("message")} type="text" className='p-2 h-36 w-full text-[#f58a3d]' placeholder='Your Message Here'></input>
+                            <input {...register("message")} type="text" className='p-2 h-36 lg:w-full text-[#f58a3d]' placeholder='Your Message Here'></input>
                             {errors.message && <span className="text-red-500">This field is required</span>}
-                            <input type="submit" value="Reserve" className='bg-orange-500 btn w-full rounded-lg text-lg mons font-bold text-white hover:bg-orange-300 cursor-pointer' />
+                            <input type="submit" value="Reserve" className='bg-orange-500 btn lg:w-full rounded-lg text-lg mons font-bold text-white hover:bg-orange-300 cursor-pointer' />
                         </div>
                     </form>
                 </div>

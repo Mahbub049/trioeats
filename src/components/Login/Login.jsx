@@ -63,7 +63,7 @@ const Login = () => {
                     <div>
                     <div className="hero poppins">
                         <ToastContainer></ToastContainer>
-                        <div className="hero-content flex-col lg:flex-row gap-6">
+                        <div className="hero-content flex-col-reverse lg:flex-row gap-6">
                             <div className="text-center lg:text-left flex-1">
                                 <img src="https://i.ibb.co/3WKmp2j/foodlogin.jpg" alt="" />
                             </div>

@@ -83,7 +83,7 @@ const Register = () => {
                     <div>
                         <ToastContainer></ToastContainer>
                     <div className="hero min-h-screen poppins">
-                        <div className="hero-content flex-col lg:flex-row-reverse gap-6">
+                        <div className="hero-content flex-col-reverse lg:flex-row-reverse gap-6">
                             <div className="text-center lg:text-left flex-1">
                                 <img src="https://i.ibb.co/4j1ZyhX/foodregister.jpg" alt="" />
                             </div>

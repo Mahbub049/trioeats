@@ -30,7 +30,7 @@ const Purchase = () => {
         data.name = user.displayName;
         data.email = user.email;
         data.quantity = parseInt(data.quantity);
-        data.price = parseFloat(data.price)*(data.quantity);
+        data.price = parseFloat(data.price);
         data.image = image,
         data.foodId = _id,
         data.owner = {
@@ -83,7 +83,8 @@ const Purchase = () => {
                 <div className="container mx-auto">
                     <Navbar></Navbar>
                     <div className="bg-[linear-gradient(45deg,rgba(19,19,24,0.50),rgba(19,19,24,0.50)),url('/src/assets/Banner/banner3.jpg')] bg-center bg-cover py-20 text-center my-6 rounded-xl mx-3 lg:mx-0">
-                        <p className="lg:text-4xl text-2xl font-bold text-[#FFC3A1] mons">Purchase Food: <span className="text-orange-500">{foodname}</span></p>
+                        <p className="lg:text-4xl text-2xl font-bold text-[#FFC3A1] mons mb-2">Purchase Food: <span className="text-orange-500">{foodname}</span></p>
+                        <p className="lg:text-2xl font-bold text-white mons">Available Quantity: <span className="text-white">{quantity}</span></p>
                     </div>
                     {
                         quantity === 0 && 
@@ -122,7 +123,7 @@ const Purchase = () => {
                                 </div>
                                 <label className="input input-bordered border-[#A75D5D] flex items-center gap-2">
                                     <MdDriveFileRenameOutline className="text-[#A75D5D]" />
-                                    <input {...register("foodname", { required: true })} type="text" className="grow" defaultValue={foodname} placeholder="Food Name" />
+                                    <input {...register("foodname", { required: true })} type="text" className="grow" value={foodname} placeholder="Food Name" />
                                     {errors.foodname && <span className="text-red-500">This field is required</span>}
                                 </label>
                                 </div>
@@ -132,7 +133,7 @@ const Purchase = () => {
                                     </div>
                                     <label className="input input-bordered border-[#A75D5D] flex items-center gap-2">
                                         <SiCashapp className="text-[#A75D5D]" />
-                                        <input {...register("price", { required: true })} type="text" className="grow" defaultValue={price} placeholder="Price" />
+                                        <input {...register("price", { required: true })} type="text" className="grow" value={price} placeholder="Price" />
                                         {errors.price && <span className="text-red-500">This field is required</span>}
                                     </label>
                                 </div>
@@ -141,11 +142,11 @@ const Purchase = () => {
                                 
                             <div className="flex-1 mb-8">
                                 <div className="label">
-                                    <span className="label-text font-semibold text-[#D3756B]">Quantity</span>
+                                    <span className="label-text font-semibold text-[#D3756B]">Quantity <span className="text-orange-500">(Available Quantity: {quantity})</span></span>
                                 </div>
                                 <label className="input input-bordered border-[#A75D5D] flex items-center gap-2">
                                     <FaSortAmountDown className="text-[#A75D5D]"></FaSortAmountDown>
-                                    <input {...register("quantity", { required: true })} type="text" className="grow" defaultValue={quantity} placeholder="Quantity" />
+                                    <input {...register("quantity", { required: true })} type="text" className="grow" placeholder="Quantity" />
                                     {errors.quantity && <span className="text-red-500">This field is required</span>}
                                 </label>
                             </div>

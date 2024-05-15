@@ -8,7 +8,7 @@ const FoodCard = ({food}) => {
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
-            <figure className="flex-1"><img src={image} className="rounded-xl h-[323px] w-full" alt="Album"/></figure>
+            <figure className="flex-1"><img src={image} className="rounded-xl h-[323px] w-full object-cover" alt="Album"/></figure>
             <div className="card-body px-2">
                 <h2 className="card-title font-bold text-2xl text-[#D3756B]">{foodname}</h2>
                 <div className="flex items-center gap-3 mt-2">

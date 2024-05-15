@@ -2,7 +2,8 @@ import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 
 const PurchaseItem = ({item, items, setItem}) => {
-    const {_id, date, image, foodname, price, owner} = item;
+    const {_id, date, image, foodname, price, owner, quantity} = item;
+    const total_price = price*quantity;
     const handleDelete = id =>{
         Swal.fire({
             title: "Are you sure?",
@@ -49,7 +50,9 @@ const PurchaseItem = ({item, items, setItem}) => {
                     {date}
                     <br/>
                 </td>
+                <td>{quantity}</td>
                 <td>$ {price}</td>
+                <td>$ {total_price}</td>
                 <td>{owner.name}</td>
                 <th>
                 <button onClick={()=>handleDelete(_id)} className="btn bg-[#A75D5D] btn-ghost text-white"><MdDelete></MdDelete> Delete</button>

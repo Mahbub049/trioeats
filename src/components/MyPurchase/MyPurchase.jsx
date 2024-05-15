@@ -34,7 +34,9 @@ const MyPurchase = () => {
                             <tr className="text-lg text-[#D3756B">
                                 <th>Food Name, Image</th>
                                 <th className="text-center">Added Time</th>
+                                <th className="text-center">Quantity</th>
                                 <th className="text-center">Price</th>
+                                <th className="text-center">Total Price</th>
                                 <th className="text-center">Owner Info</th>
                                 <th className="text-center">Delete</th>
                             </tr>
