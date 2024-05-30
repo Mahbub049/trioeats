@@ -5,6 +5,7 @@ import Footer from "../Shared/Footer/Footer";
 import HomeCards from "./HomeCards/HomeCards";
 import Reservations from "./Reservations/Reservations";
 import Contact from "./Contact/Contact";
+import Review from "./Review/Review";
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
                     <Banner></Banner>
                     <HomeCards></HomeCards>
                     <Reservations></Reservations>
+                    <Review></Review>
                     <Contact></Contact>
                 </div>
                     <Footer></Footer>
